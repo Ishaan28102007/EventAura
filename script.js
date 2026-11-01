@@ -62,7 +62,7 @@ if (bookingForm) {
 
         try {
             console.log("booking form submit triggered");
-            const response = await fetch("/bookings", {
+            const response = await fetch("https://eventaura-backend-eg9t.onrender.com//bookings", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
