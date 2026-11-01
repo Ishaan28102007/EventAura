@@ -58,7 +58,15 @@ console.log(booking);
 
 // Save booking to JSON file
 const filePath = path.join(__dirname, "data", "bookings.json");
+const dataDir = path.join(__dirname, "data");
 
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
+
+if (!fs.existsSync(filePath)) {
+  fs.writeFileSync(filePath, "[]");
+}
 let bookings = [];
 
 if (fs.existsSync(filePath)) {
