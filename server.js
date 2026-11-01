@@ -88,7 +88,9 @@ fs.writeFileSync(filePath, JSON.stringify(bookings, null, 2));
 // Get all bookings
 app.get("/api/bookings", (req, res) => {
     const filePath = path.join(__dirname, "data", "bookings.json");
-
+if (!fs.existsSync(filePath)) {
+        return res.json([]);
+    }
     const bookings = JSON.parse(
         fs.readFileSync(filePath, "utf8")
     );
