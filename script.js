@@ -48,6 +48,7 @@ const bookingForm = document.getElementById("bookingForm");
 if (bookingForm) {
     bookingForm.addEventListener("submit", async function (e) {
         e.preventDefault();
+        console.log("Booking form submit triggered");
 
         const bookingData = {
             name: document.getElementById("bookingName").value,
@@ -60,6 +61,7 @@ if (bookingForm) {
         };
 
         try {
+            console.log("booking form submit triggered");
             const response = await fetch("/bookings", {
                 method: "POST",
                 headers: {

@@ -221,33 +221,33 @@
     </p>
 
 
-    <form>
+    <form id="bookingForm">
 
 
         <label>Name</label>
 
-        <input
+        <input id="bookingName"
         type="text"
         placeholder="Enter your name">
 
 
         <label>Phone Number</label>
 
-        <input
+        <input id="bookingPhone"
         type="text"
         placeholder="Enter your phone number">
 
 
         <label>Email</label>
 
-        <input
+        <input id="bookingEmail"
         type="email"
         placeholder="Enter your email">
 
 
         <label>Select Event</label>
 
-        <select>
+        <select id="eventType">
 
             <option>College Fest</option>
 
@@ -266,12 +266,12 @@
 
         <label>Event Date</label>
 
-        <input type="date">
+        <input id="eventDate"type="date">
 
 
         <label>Message</label>
 
-        <textarea
+        <textarea id="eventDetails"
         placeholder="Tell us about your event"></textarea>
 
 
@@ -279,6 +279,7 @@
             Submit Booking
         </button>
 
+        <p id="bookingResponse"></p>
 
     </form>
 
@@ -320,7 +321,7 @@
 
 </div>
 
-
+<script src="script.js"></script>
 </body>
 
 </html>
